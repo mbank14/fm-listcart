@@ -94,3 +94,12 @@ body {
 .shop__cart__items__content__text{
   margin: 0;
 }
+
+.item__quantity{
+  font-weight: 700;
+  color: salmon;
+}
+
+.item__price{
+  color: rgba(35, 35, 35, 0.521);
+}

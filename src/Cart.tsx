@@ -16,18 +16,24 @@ export default function Cart (
     // {items, onAddItem, onRemoveItem} : CartProps
 ){
 
-    const amountItems: Array<{id:string,name:string}> = [
+    const amountItems: Array<{id:string,name:string,quantity:number, price:number}> = [
         {
             id: "1",
-            name: "sdfsdf"
+            name: "sdfsdf",
+            quantity:2, 
+            price:2
         },
         {
             id: "1",
-            name: "sdfsdf"
+            name: "sdfsdf",
+            quantity:4,
+            price:3
         },
         {
             id: "1",
-            name: "sdfsdf"
+            name: "sdfsdf",
+            quantity:3,
+            price:9
         }
     ]
 
@@ -42,7 +48,25 @@ export default function Cart (
                         </div>
                     ):(
                         <div className="shop__cart__items">
-                            <div></div>
+                            <div>
+                                <ul>
+                                    {amountItems.map((item)=>(
+                                        <li key={item.id} >
+                                            <div>
+                                                <div>
+                                                    <strong>{item.name}</strong>
+                                                    <p>
+                                                        <span className="item__quantity">{item.quantity}x</span>   <span className="item__price">@{item.price}</span>      ${item.quantity*item.price}
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <button onClick={()=>0}>⚔️</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                             <div className="shop__cart__items__total">
                                 <p className="items__total__text">Total Order</p>
                                 <p className="items__total__price">$60</p>
