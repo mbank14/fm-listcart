@@ -42,7 +42,7 @@ export default function Cart (
 
     return(
         <>
-            <section>
+            <section className="shop__cart__wrapper">
                 <h4 className="shop__cart__title">Your cart ({amountItems.length})</h4>
                 { !amountItems ? (
                         <div className="empty-cart">
@@ -52,17 +52,17 @@ export default function Cart (
                     ):(
                         <div className="shop__cart__items">
                             <div>
-                                <ul>
+                                <ul className="cart__items__list">
                                     {amountItems.map((item)=>(
                                         <li key={item.id} >
-                                            <div>
-                                                <div>
+                                            <div className="cart__item__wrapper">
+                                                <div className="cart__item__description">
                                                     <strong>{item.name}</strong>
                                                     <p>
-                                                        <span className="item__quantity">{item.quantity}x</span>   <span className="item__price">@{item.price}</span>      ${item.quantity*item.price}
+                                                        <span className="item__quantity">{item.quantity}x</span>   <span className="item__price" >@${item.price}</span>      ${item.quantity*item.price}
                                                     </p>
                                                 </div>
-                                                <div>
+                                                <div className="cart__item__button">
                                                     <button onClick={()=>0}>⚔️</button>
                                                 </div>
                                             </div>
@@ -80,6 +80,8 @@ export default function Cart (
                                     This is a <strong>carbon-neutral</strong> delivery
                                 </p>
                             </div>
+
+                            <button className="shop__cart__button-confirm">Confirm Order</button>
                         </div>
                     )
                 }

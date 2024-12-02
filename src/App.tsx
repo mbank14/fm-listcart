@@ -11,17 +11,17 @@ interface Images{
   tablet: string,
 }
 
-interface Menu {
+interface ListMenu {
   id:string
-  images: Images[],
+  image: Images[],
   name: string,
   category: string,
   price: number
 }
 
-interface ListMenu {
-  menu: Menu[]
-}
+// interface ListMenu {
+//   menu: Menu[]
+// }
 
 
 function App() {
@@ -59,7 +59,7 @@ function App() {
                 <li key={item.id}>
                   <div>
                     <div className="item__list__image">
-                      <img src={item.image.mobile} alt="" />
+                      <img src={item.image.desktop} alt="" />
                     </div>
                     <div className="item__list__button">
                       <button>add to cart</button>

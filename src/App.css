@@ -12,6 +12,9 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+ul li{
+  list-style: none;
+}
 body {
   background-color: papayawhip;
   margin: 0;
@@ -97,13 +100,17 @@ body {
 
 .shop__cart{
   grid-column: 3/3;
-  padding: 1.2rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
+
 }
 
 .shop__cart__title{
   margin: 0;
+}
+
+.shop__cart__wrapper{
+  background-color: rgb(255, 255, 255);
+  padding: 1.2rem;
+  border-radius: 15px;
 }
 
 .empty-cart{
@@ -145,7 +152,7 @@ body {
   padding: 15px 0;
   border-radius: 10px;
   text-align: center;
-  background-color: aquamarine;
+  background-color: rgba(241, 244, 235, 0.559);
 }
 .shop__cart__items__content__text{
   margin: 0;
@@ -157,5 +164,43 @@ body {
 }
 
 .item__price{
+  margin: 0 1rem;
   color: rgba(35, 35, 35, 0.521);
+}
+
+
+.cart__items__list{
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  margin: 0;
+  padding: 0;
+}
+.cart__items__list > li{
+  padding: 1rem 0;
+  border-bottom: 1px solid #e1e1e177;
+}
+
+.cart__item__wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+.cart__item__description {
+  flex: 1;
+}
+.cart__item__description p{
+  margin: 0;
+}
+
+.shop__cart__button-confirm{
+  display: block;
+  width: 100%;
+  appearance: unset;
+  margin-top: 1rem;
+  background-color: tomato;
+  padding: .75rem 0;
+  color: white;
+  border-radius: 50px;
 }
