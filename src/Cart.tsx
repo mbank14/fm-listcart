@@ -1,3 +1,4 @@
+import {useMemo} from 'react'
 // interface CartItem{
 //     id:string,
 //     quantity: number,
@@ -24,18 +25,20 @@ export default function Cart (
             price:2
         },
         {
-            id: "1",
+            id: "3",
             name: "sdfsdf",
             quantity:4,
             price:3
         },
         {
-            id: "1",
+            id: "142",
             name: "sdfsdf",
             quantity:3,
             price:9
         }
     ]
+
+    const amountPrice = useMemo(() => amountItems.map((item) => item.price * item.quantity).reduce((acc,current) => acc + current),0)
 
     return(
         <>
@@ -69,7 +72,7 @@ export default function Cart (
                             </div>
                             <div className="shop__cart__items__total">
                                 <p className="items__total__text">Total Order</p>
-                                <p className="items__total__price">$60</p>
+                                <p className="items__total__price">${amountPrice}</p>
                             </div>
 
                             <div className="shop__cart__items__content">
