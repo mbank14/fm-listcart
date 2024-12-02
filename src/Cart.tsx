@@ -38,7 +38,7 @@ export default function Cart (
         }
     ]
 
-    const amountPrice = useMemo(() => amountItems.map((item) => item.price * item.quantity).reduce((acc,current) => acc + current),0)
+    const amountPrice = useMemo(() => amountItems.map((item) => item.price * item.quantity).reduce((acc,current) => acc + current, 0))
 
     return(
         <>

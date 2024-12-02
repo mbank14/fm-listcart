@@ -35,14 +35,70 @@ body {
 
 .shop__items__list{
   display: flex;
-  gap: .75rem;
+  gap: 1.25rem;
   flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
+
+.shop__items__list li {
+  flex: 0 0 30.33%;
+  list-style: none;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.item__list__image{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.item__list__image img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+.item__list__button{
+  position: relative;
+  width: 100%;
+}
+.item__list__button > button{
+  position: absolute;
+  background-color: tomato;
+  color: white;
+  top: 0;
+  transform: translate(50%, -50%);
+  border-radius: 100px;
+}
+
+.item__list__description{
+  margin-top: 1.75rem
+}
+.item__list__description p{
+  margin: 0;
+}
+.item__list__description__category{
+  font-size: small;
+  color: rgb(165, 144, 144);
+}
+.item__list__description__name{
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+.item__list__description__price{
+  font-size: 1rem;
+  color: tomato;
+  font-weight: 600;
+}
+
 
 .shop__cart{
   grid-column: 3/3;
   padding: 1.2rem;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
 
